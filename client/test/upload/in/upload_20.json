@@ -1,0 +1,362 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/fstream.tcc",
+                "remotefile": "test/c++/9/bits/fstream.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/functexcept.h",
+                "remotefile": "test/c++/9/bits/functexcept.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/functional_hash.h",
+                "remotefile": "test/c++/9/bits/functional_hash.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/gslice_array.h",
+                "remotefile": "test/c++/9/bits/gslice_array.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/gslice.h",
+                "remotefile": "test/c++/9/bits/gslice.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/hash_bytes.h",
+                "remotefile": "test/c++/9/bits/hash_bytes.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/hashtable_policy.h",
+                "remotefile": "test/c++/9/bits/hashtable_policy.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/hashtable.h",
+                "remotefile": "test/c++/9/bits/hashtable.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/indirect_array.h",
+                "remotefile": "test/c++/9/bits/indirect_array.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/invoke.h",
+                "remotefile": "test/c++/9/bits/invoke.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/ios_base.h",
+                "remotefile": "test/c++/9/bits/ios_base.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/istream.tcc",
+                "remotefile": "test/c++/9/bits/istream.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/list.tcc",
+                "remotefile": "test/c++/9/bits/list.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_classes.h",
+                "remotefile": "test/c++/9/bits/locale_classes.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_classes.tcc",
+                "remotefile": "test/c++/9/bits/locale_classes.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_conv.h",
+                "remotefile": "test/c++/9/bits/locale_conv.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_facets_nonio.h",
+                "remotefile": "test/c++/9/bits/locale_facets_nonio.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_facets_nonio.tcc",
+                "remotefile": "test/c++/9/bits/locale_facets_nonio.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_facets.h",
+                "remotefile": "test/c++/9/bits/locale_facets.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/locale_facets.tcc",
+                "remotefile": "test/c++/9/bits/locale_facets.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user11",
+            "password": "password11"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/localefwd.h",
+                "remotefile": "test/c++/9/bits/localefwd.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/mask_array.h",
+                "remotefile": "test/c++/9/bits/mask_array.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user12",
+            "password": "password12"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/memoryfwd.h",
+                "remotefile": "test/c++/9/bits/memoryfwd.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/move.h",
+                "remotefile": "test/c++/9/bits/move.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user13",
+            "password": "password13"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/nested_exception.h",
+                "remotefile": "test/c++/9/bits/nested_exception.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/node_handle.h",
+                "remotefile": "test/c++/9/bits/node_handle.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user14",
+            "password": "password14"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/ostream_insert.h",
+                "remotefile": "test/c++/9/bits/ostream_insert.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/ostream.tcc",
+                "remotefile": "test/c++/9/bits/ostream.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user15",
+            "password": "password15"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/parse_numbers.h",
+                "remotefile": "test/c++/9/bits/parse_numbers.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/postypes.h",
+                "remotefile": "test/c++/9/bits/postypes.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user16",
+            "password": "password16"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/predefined_ops.h",
+                "remotefile": "test/c++/9/bits/predefined_ops.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/ptr_traits.h",
+                "remotefile": "test/c++/9/bits/ptr_traits.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user17",
+            "password": "password17"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/quoted_string.h",
+                "remotefile": "test/c++/9/bits/quoted_string.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/random.h",
+                "remotefile": "test/c++/9/bits/random.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user18",
+            "password": "password18"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/random.tcc",
+                "remotefile": "test/c++/9/bits/random.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/range_access.h",
+                "remotefile": "test/c++/9/bits/range_access.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user19",
+            "password": "password19"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/refwrap.h",
+                "remotefile": "test/c++/9/bits/refwrap.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/regex_automaton.h",
+                "remotefile": "test/c++/9/bits/regex_automaton.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user20",
+            "password": "password20"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/regex_automaton.tcc",
+                "remotefile": "test/c++/9/bits/regex_automaton.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/regex_compiler.h",
+                "remotefile": "test/c++/9/bits/regex_compiler.h"
+            }
+        ]
+    }
+]

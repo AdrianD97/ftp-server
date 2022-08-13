@@ -1,0 +1,290 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/download/files/telnet4.h"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/download/files/auto_ptr5.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/download/files/auto_ptr6.h"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/download/files/backward_warning5.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/download/files/backward_warning6.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/download/files/nameser_compat5.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp10.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/download/files/nameser7.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/download/files/binders3.h"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/download/files/hash_fun3.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/download/files/hash_map3"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/download/files/hash_set5"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/download/files/hash_set6"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/download/files/hashtable5.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp11.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/download/files/nameser8.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/download/files/hashtable6.h"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/download/files/strstream3"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/download/files/hashtable7.h"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/download/files/strstream4"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user11",
+            "password": "password11"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/download/files/telnet5.h"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/download/files/tftp4.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user12",
+            "password": "password12"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp12.h"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/download/files/tftp5.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user13",
+            "password": "password13"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/download/files/tftp6.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/download/files/nameser_compat6.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user14",
+            "password": "password14"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp13.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/download/files/nameser9.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user15",
+            "password": "password15"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp14.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/download/files/nameser_compat7.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user16",
+            "password": "password16"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp15.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/download/files/nameser10.h"
+            }
+        ]
+    }
+]

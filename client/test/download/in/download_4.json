@@ -1,0 +1,74 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/download/files/telnet1.h"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/download/files/tftp1.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp4.h"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/download/files/tftp2.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/download/files/tftp3.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/download/files/nameser_compat2.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/download/files/ftp5.h"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/download/files/nameser2.h"
+            }
+        ]
+    }
+]

@@ -1,0 +1,146 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/int-ll64.h",
+                "remotefile": "test/asm-generic/int-ll64.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/ioctl.h",
+                "remotefile": "test/asm-generic/ioctl.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/ioctls.h",
+                "remotefile": "test/asm-generic/ioctls.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/ipcbuf.h",
+                "remotefile": "test/asm-generic/ipcbuf.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/kvm_para.h",
+                "remotefile": "test/asm-generic/kvm_para.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/mman-common.h",
+                "remotefile": "test/asm-generic/mman-common.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/mman.h",
+                "remotefile": "test/asm-generic/mman.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/msgbuf.h",
+                "remotefile": "test/asm-generic/msgbuf.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/param.h",
+                "remotefile": "test/asm-generic/param.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/poll.h",
+                "remotefile": "test/asm-generic/poll.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/posix_types.h",
+                "remotefile": "test/asm-generic/posix_types.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/resource.h",
+                "remotefile": "test/asm-generic/resource.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/sembuf.h",
+                "remotefile": "test/asm-generic/sembuf.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/setup.h",
+                "remotefile": "test/asm-generic/setup.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/shmbuf.h",
+                "remotefile": "test/asm-generic/shmbuf.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/siginfo.h",
+                "remotefile": "test/asm-generic/siginfo.h"
+            }
+        ]
+    }
+]

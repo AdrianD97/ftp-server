@@ -1,0 +1,2702 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user11",
+            "password": "password11"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user12",
+            "password": "password12"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user13",
+            "password": "password13"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user14",
+            "password": "password14"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user15",
+            "password": "password15"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user16",
+            "password": "password16"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user17",
+            "password": "password17"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user18",
+            "password": "password18"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user19",
+            "password": "password19"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user20",
+            "password": "password20"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user21",
+            "password": "password21"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user22",
+            "password": "password22"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user23",
+            "password": "password23"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user24",
+            "password": "password24"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user25",
+            "password": "password25"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user26",
+            "password": "password26"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user27",
+            "password": "password27"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user28",
+            "password": "password28"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user29",
+            "password": "password29"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user30",
+            "password": "password30"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user31",
+            "password": "password31"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user32",
+            "password": "password32"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user33",
+            "password": "password33"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user34",
+            "password": "password34"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user35",
+            "password": "password35"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user36",
+            "password": "password36"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user37",
+            "password": "password37"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user38",
+            "password": "password38"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user39",
+            "password": "password39"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user40",
+            "password": "password40"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user41",
+            "password": "password41"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user42",
+            "password": "password42"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user43",
+            "password": "password43"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user44",
+            "password": "password44"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user45",
+            "password": "password45"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user46",
+            "password": "password46"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user47",
+            "password": "password47"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user48",
+            "password": "password48"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user49",
+            "password": "password49"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user50",
+            "password": "password50"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user51",
+            "password": "password51"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user52",
+            "password": "password52"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user53",
+            "password": "password53"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user54",
+            "password": "password54"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user55",
+            "password": "password55"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user56",
+            "password": "password56"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user57",
+            "password": "password57"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user58",
+            "password": "password58"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user59",
+            "password": "password59"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user60",
+            "password": "password60"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user61",
+            "password": "password61"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user62",
+            "password": "password62"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user63",
+            "password": "password63"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user64",
+            "password": "password64"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user65",
+            "password": "password65"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user66",
+            "password": "password66"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user67",
+            "password": "password67"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user68",
+            "password": "password68"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user69",
+            "password": "password69"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user70",
+            "password": "password70"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user71",
+            "password": "password71"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user72",
+            "password": "password72"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user73",
+            "password": "password73"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user74",
+            "password": "password74"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user75",
+            "password": "password75"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user76",
+            "password": "password76"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user77",
+            "password": "password77"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user78",
+            "password": "password78"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user79",
+            "password": "password79"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user80",
+            "password": "password80"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user81",
+            "password": "password81"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user82",
+            "password": "password82"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user83",
+            "password": "password83"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user84",
+            "password": "password84"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user85",
+            "password": "password85"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user86",
+            "password": "password86"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user87",
+            "password": "password87"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user88",
+            "password": "password88"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user89",
+            "password": "password89"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user90",
+            "password": "password90"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user91",
+            "password": "password91"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user92",
+            "password": "password92"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user93",
+            "password": "password93"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user94",
+            "password": "password94"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user95",
+            "password": "password95"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user96",
+            "password": "password96"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user97",
+            "password": "password97"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user98",
+            "password": "password98"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user99",
+            "password": "password99"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user100",
+            "password": "password100"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user101",
+            "password": "password101"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user102",
+            "password": "password102"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user103",
+            "password": "password103"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user104",
+            "password": "password104"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user105",
+            "password": "password105"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user106",
+            "password": "password106"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user107",
+            "password": "password107"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user108",
+            "password": "password108"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user109",
+            "password": "password109"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user110",
+            "password": "password110"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user111",
+            "password": "password111"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user112",
+            "password": "password112"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user113",
+            "password": "password113"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user114",
+            "password": "password114"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user115",
+            "password": "password115"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user116",
+            "password": "password116"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user117",
+            "password": "password117"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user118",
+            "password": "password118"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user119",
+            "password": "password119"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/tftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user120",
+            "password": "password120"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user121",
+            "password": "password121"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user122",
+            "password": "password122"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user123",
+            "password": "password123"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user124",
+            "password": "password124"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user125",
+            "password": "password125"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user126",
+            "password": "password126"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user127",
+            "password": "password127"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user128",
+            "password": "password128"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user129",
+            "password": "password129"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user130",
+            "password": "password130"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/strstream",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user131",
+            "password": "password131"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user132",
+            "password": "password132"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user133",
+            "password": "password133"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user134",
+            "password": "password134"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user135",
+            "password": "password135"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user136",
+            "password": "password136"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user137",
+            "password": "password137"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user138",
+            "password": "password138"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user139",
+            "password": "password139"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user140",
+            "password": "password140"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user141",
+            "password": "password141"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user142",
+            "password": "password142"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user143",
+            "password": "password143"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/telnet.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user144",
+            "password": "password144"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/auto_ptr.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user145",
+            "password": "password145"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/backward_warning.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser_compat.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user146",
+            "password": "password146"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user147",
+            "password": "password147"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/binders.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_fun.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user148",
+            "password": "password148"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_map",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user149",
+            "password": "password149"
+        },
+        "files": [
+            {
+                "remotefile": "test/c++/9/backward/hash_set",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/c++/9/backward/hashtable.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user150",
+            "password": "password150"
+        },
+        "files": [
+            {
+                "remotefile": "test/arpa/ftp.h",
+                "localfile": "./test/append/file.txt"
+            },
+            {
+                "remotefile": "test/arpa/nameser.h",
+                "localfile": "./test/append/file.txt"
+            }
+        ]
+    }
+]

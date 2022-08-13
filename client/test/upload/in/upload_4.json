@@ -1,0 +1,74 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/auxvec.h",
+                "remotefile": "test/asm-generic/auxvec.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/bitsperlong.h",
+                "remotefile": "test/asm-generic/bitsperlong.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/bpf_perf_event.h",
+                "remotefile": "test/asm-generic/bpf_perf_event.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/errno-base.h",
+                "remotefile": "test/asm-generic/errno-base.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/errno.h",
+                "remotefile": "test/asm-generic/errno.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/fcntl.h",
+                "remotefile": "test/asm-generic/fcntl.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/hugetlb_encode.h",
+                "remotefile": "test/asm-generic/hugetlb_encode.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/int-l64.h",
+                "remotefile": "test/asm-generic/int-l64.h"
+            }
+        ]
+    }
+]

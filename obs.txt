@@ -1,0 +1,14 @@
+1. Avaiable operations:
+- create a folder
+- create a file
+- modify a file
+- delete a file
+- read a file
+- get file metadata
+- listare folder
+
+2. Future commands
+- rename a file/folder
+- delete a folder
+
+Don't forget to talk about the client (how did you get the data?; talk about architecture and how the time is computed)

@@ -1,0 +1,32 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    }
+]

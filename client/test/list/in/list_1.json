@@ -1,0 +1,17 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            "test",
+            "test/arpa",
+            "test/arpa/inet.h",
+            "test/asm-generic",
+            "test/GL/internal"
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+*.class
+src/test/
+node_modules/
+*.csv
+resources/
+client/test/download/files/*
+.vscode/

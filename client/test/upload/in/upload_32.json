@@ -1,0 +1,578 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/uniform_int_dist.h",
+                "remotefile": "test/c++/9/bits/uniform_int_dist.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/unique_lock.h",
+                "remotefile": "test/c++/9/bits/unique_lock.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/unique_ptr.h",
+                "remotefile": "test/c++/9/bits/unique_ptr.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/unordered_map.h",
+                "remotefile": "test/c++/9/bits/unordered_map.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/unordered_set.h",
+                "remotefile": "test/c++/9/bits/unordered_set.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/uses_allocator.h",
+                "remotefile": "test/c++/9/bits/uses_allocator.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/valarray_after.h",
+                "remotefile": "test/c++/9/bits/valarray_after.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/valarray_array.h",
+                "remotefile": "test/c++/9/bits/valarray_array.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/valarray_array.tcc",
+                "remotefile": "test/c++/9/bits/valarray_array.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/valarray_before.h",
+                "remotefile": "test/c++/9/bits/valarray_before.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/vector.tcc",
+                "remotefile": "test/c++/9/bits/vector.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/array",
+                "remotefile": "test/c++/9/debug/array"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/assertions.h",
+                "remotefile": "test/c++/9/debug/assertions.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/bitset",
+                "remotefile": "test/c++/9/debug/bitset"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/debug.h",
+                "remotefile": "test/c++/9/debug/debug.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/deque",
+                "remotefile": "test/c++/9/debug/deque"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/formatter.h",
+                "remotefile": "test/c++/9/debug/formatter.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/forward_list",
+                "remotefile": "test/c++/9/debug/forward_list"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/functions.h",
+                "remotefile": "test/c++/9/debug/functions.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/helper_functions.h",
+                "remotefile": "test/c++/9/debug/helper_functions.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user11",
+            "password": "password11"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/list",
+                "remotefile": "test/c++/9/debug/list"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/macros.h",
+                "remotefile": "test/c++/9/debug/macros.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user12",
+            "password": "password12"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/map",
+                "remotefile": "test/c++/9/debug/map"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/map.h",
+                "remotefile": "test/c++/9/debug/map.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user13",
+            "password": "password13"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/multimap.h",
+                "remotefile": "test/c++/9/debug/multimap.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/multiset.h",
+                "remotefile": "test/c++/9/debug/multiset.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user14",
+            "password": "password14"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_base.h",
+                "remotefile": "test/c++/9/debug/safe_base.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_container.h",
+                "remotefile": "test/c++/9/debug/safe_container.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user15",
+            "password": "password15"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_iterator.h",
+                "remotefile": "test/c++/9/debug/safe_iterator.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_iterator.tcc",
+                "remotefile": "test/c++/9/debug/safe_iterator.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user16",
+            "password": "password16"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_local_iterator.h",
+                "remotefile": "test/c++/9/debug/safe_local_iterator.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_local_iterator.tcc",
+                "remotefile": "test/c++/9/debug/safe_local_iterator.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user17",
+            "password": "password17"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_sequence.h",
+                "remotefile": "test/c++/9/debug/safe_sequence.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_sequence.tcc",
+                "remotefile": "test/c++/9/debug/safe_sequence.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user18",
+            "password": "password18"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_unordered_base.h",
+                "remotefile": "test/c++/9/debug/safe_unordered_base.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_unordered_container.h",
+                "remotefile": "test/c++/9/debug/safe_unordered_container.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user19",
+            "password": "password19"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/safe_unordered_container.tcc",
+                "remotefile": "test/c++/9/debug/safe_unordered_container.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/set",
+                "remotefile": "test/c++/9/debug/set"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user20",
+            "password": "password20"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/set.h",
+                "remotefile": "test/c++/9/debug/set.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/stl_iterator.h",
+                "remotefile": "test/c++/9/debug/stl_iterator.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user21",
+            "password": "password21"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/string",
+                "remotefile": "test/c++/9/debug/string"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/unordered_map",
+                "remotefile": "test/c++/9/debug/unordered_map"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user22",
+            "password": "password22"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/debug/unordered_set",
+                "remotefile": "test/c++/9/debug/unordered_set"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/debug/vector",
+                "remotefile": "test/c++/9/debug/vector"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user23",
+            "password": "password23"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/decimal/decimal",
+                "remotefile": "test/c++/9/decimal/decimal"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/decimal/decimal.h",
+                "remotefile": "test/c++/9/decimal/decimal.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user24",
+            "password": "password24"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/fs_dir.h",
+                "remotefile": "test/c++/9/experimental/bits/fs_dir.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/fs_fwd.h",
+                "remotefile": "test/c++/9/experimental/bits/fs_fwd.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user25",
+            "password": "password25"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/fs_ops.h",
+                "remotefile": "test/c++/9/experimental/bits/fs_ops.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/fs_path.h",
+                "remotefile": "test/c++/9/experimental/bits/fs_path.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user26",
+            "password": "password26"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/lfts_config.h",
+                "remotefile": "test/c++/9/experimental/bits/lfts_config.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/net.h",
+                "remotefile": "test/c++/9/experimental/bits/net.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user27",
+            "password": "password27"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/shared_ptr.h",
+                "remotefile": "test/c++/9/experimental/bits/shared_ptr.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/bits/string_view.tcc",
+                "remotefile": "test/c++/9/experimental/bits/string_view.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user28",
+            "password": "password28"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/algorithm",
+                "remotefile": "test/c++/9/experimental/algorithm"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/any",
+                "remotefile": "test/c++/9/experimental/any"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user29",
+            "password": "password29"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/array",
+                "remotefile": "test/c++/9/experimental/array"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/buffer",
+                "remotefile": "test/c++/9/experimental/buffer"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user30",
+            "password": "password30"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/chrono",
+                "remotefile": "test/c++/9/experimental/chrono"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/deque",
+                "remotefile": "test/c++/9/experimental/deque"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user31",
+            "password": "password31"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/executor",
+                "remotefile": "test/c++/9/experimental/executor"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/filesystem",
+                "remotefile": "test/c++/9/experimental/filesystem"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user32",
+            "password": "password32"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/forward_list",
+                "remotefile": "test/c++/9/experimental/forward_list"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/experimental/functional",
+                "remotefile": "test/c++/9/experimental/functional"
+            }
+        ]
+    }
+]

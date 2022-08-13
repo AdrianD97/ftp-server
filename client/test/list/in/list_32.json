@@ -1,0 +1,482 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs/v8",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            "test",
+            "test/rpc",
+            "test/rpc/netdb.h",
+            "test/sfml",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs/v8",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            "test",
+            "test/arpa",
+            "test/arpa/inet.h",
+            "test/asm-generic",
+            "test/GL/internal"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user11",
+            "password": "password11"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user12",
+            "password": "password12"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user13",
+            "password": "password13"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs/v8",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user14",
+            "password": "password14"
+        },
+        "files": [
+            "test",
+            "test/rpc",
+            "test/rpc/netdb.h",
+            "test/sfml",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user15",
+            "password": "password15"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user16",
+            "password": "password16"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user17",
+            "password": "password17"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user18",
+            "password": "password18"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user19",
+            "password": "password19"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs/v8",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user20",
+            "password": "password20"
+        },
+        "files": [
+            "test",
+            "test/rpc",
+            "test/rpc/netdb.h",
+            "test/sfml",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user21",
+            "password": "password21"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user22",
+            "password": "password22"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user23",
+            "password": "password23"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs/v8",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user24",
+            "password": "password24"
+        },
+        "files": [
+            "test",
+            "test/rpc",
+            "test/rpc/netdb.h",
+            "test/sfml",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user25",
+            "password": "password25"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user26",
+            "password": "password26"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user27",
+            "password": "password27"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs/v8",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user28",
+            "password": "password28"
+        },
+        "files": [
+            "test",
+            "test/arpa",
+            "test/arpa/inet.h",
+            "test/asm-generic",
+            "test/GL/internal"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user29",
+            "password": "password29"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user30",
+            "password": "password30"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user31",
+            "password": "password31"
+        },
+        "files": [
+            "test",
+            "test/aio.h",
+            "test/drm",
+            "test/finclude",
+            "test/linux/android"
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user32",
+            "password": "password32"
+        },
+        "files": [
+            "test",
+            "test/linux",
+            "test/linux/spi",
+            "test/nodejs",
+            "test/nodejs/deps/v8/include"
+        ]
+    }
+]

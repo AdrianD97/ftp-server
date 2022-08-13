@@ -1,0 +1,38 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/arpa/nameser_compat.h",
+                "remotefile": "test/arpa/nameser_compat.h"
+            },
+            {
+                "localfile": "./test/upload/files/arpa/nameser.h",
+                "remotefile": "test/arpa/nameser.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/arpa/telnet.h",
+                "remotefile": "test/arpa/telnet.h"
+            },
+            {
+                "localfile": "./test/upload/files/arpa/tftp.h",
+                "remotefile": "test/arpa/tftp.h"
+            }
+        ]
+    }
+]

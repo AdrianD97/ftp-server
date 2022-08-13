@@ -1,0 +1,290 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/algorithmfwd.h",
+                "remotefile": "test/c++/9/bits/algorithmfwd.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/alloc_traits.h",
+                "remotefile": "test/c++/9/bits/alloc_traits.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/allocated_ptr.h",
+                "remotefile": "test/c++/9/bits/allocated_ptr.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/allocator.h",
+                "remotefile": "test/c++/9/bits/allocator.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/atomic_base.h",
+                "remotefile": "test/c++/9/bits/atomic_base.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/atomic_futex.h",
+                "remotefile": "test/c++/9/bits/atomic_futex.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/atomic_lockfree_defines.h",
+                "remotefile": "test/c++/9/bits/atomic_lockfree_defines.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/basic_ios.h",
+                "remotefile": "test/c++/9/bits/basic_ios.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/basic_ios.tcc",
+                "remotefile": "test/c++/9/bits/basic_ios.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/basic_string.h",
+                "remotefile": "test/c++/9/bits/basic_string.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/basic_string.tcc",
+                "remotefile": "test/c++/9/bits/basic_string.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/boost_concept_check.h",
+                "remotefile": "test/c++/9/bits/boost_concept_check.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/auto_ptr.h",
+                "remotefile": "test/c++/9/bits/auto_ptr.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/c++0x_warning.h",
+                "remotefile": "test/c++/9/bits/c++0x_warning.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/char_traits.h",
+                "remotefile": "test/c++/9/bits/char_traits.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/codecvt.h",
+                "remotefile": "test/c++/9/bits/codecvt.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/concept_check.h",
+                "remotefile": "test/c++/9/bits/concept_check.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/cpp_type_traits.h",
+                "remotefile": "test/c++/9/bits/cpp_type_traits.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/cxxabi_forced.h",
+                "remotefile": "test/c++/9/bits/cxxabi_forced.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/cxxabi_init_exception.h",
+                "remotefile": "test/c++/9/bits/cxxabi_init_exception.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user11",
+            "password": "password11"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/deque.tcc",
+                "remotefile": "test/c++/9/bits/deque.tcc"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/enable_special_members.h",
+                "remotefile": "test/c++/9/bits/enable_special_members.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user12",
+            "password": "password12"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/erase_if.h",
+                "remotefile": "test/c++/9/bits/erase_if.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/exception_defines.h",
+                "remotefile": "test/c++/9/bits/exception_defines.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user13",
+            "password": "password13"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/exception_ptr.h",
+                "remotefile": "test/c++/9/bits/exception_ptr.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/exception.h",
+                "remotefile": "test/c++/9/bits/exception.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user14",
+            "password": "password14"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/forward_list.h",
+                "remotefile": "test/c++/9/bits/forward_list.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/forward_list.tcc",
+                "remotefile": "test/c++/9/bits/forward_list.tcc"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user15",
+            "password": "password15"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/fs_dir.h",
+                "remotefile": "test/c++/9/bits/fs_dir.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/fs_fwd.h",
+                "remotefile": "test/c++/9/bits/fs_fwd.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user16",
+            "password": "password16"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/bits/fs_ops.h",
+                "remotefile": "test/c++/9/bits/fs_ops.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/bits/fs_path.h",
+                "remotefile": "test/c++/9/bits/fs_path.h"
+            }
+        ]
+    }
+]

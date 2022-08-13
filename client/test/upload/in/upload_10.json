@@ -1,0 +1,182 @@
+[
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user1",
+            "password": "password1"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/signal-defs.h",
+                "remotefile": "test/asm-generic/signal-defs.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/signal.h",
+                "remotefile": "test/asm-generic/signal.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user2",
+            "password": "password2"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/socket.h",
+                "remotefile": "test/asm-generic/socket.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/sockios.h",
+                "remotefile": "test/asm-generic/sockios.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user3",
+            "password": "password3"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/stat.h",
+                "remotefile": "test/asm-generic/stat.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/statfs.h",
+                "remotefile": "test/asm-generic/statfs.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user4",
+            "password": "password4"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/swab.h",
+                "remotefile": "test/asm-generic/swab.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/termbits.h",
+                "remotefile": "test/asm-generic/termbits.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user5",
+            "password": "password5"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/termios.h",
+                "remotefile": "test/asm-generic/termios.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/types.h",
+                "remotefile": "test/asm-generic/types.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user6",
+            "password": "password6"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/asm-generic/ucontext.h",
+                "remotefile": "test/asm-generic/ucontext.h"
+            },
+            {
+                "localfile": "./test/upload/files/asm-generic/unistd.h",
+                "remotefile": "test/asm-generic/unistd.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user7",
+            "password": "password7"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/backward/auto_ptr.h",
+                "remotefile": "test/c++/9/backward/auto_ptr.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/backward/backward_warning.h",
+                "remotefile": "test/c++/9/backward/backward_warning.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user8",
+            "password": "password8"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/backward/binders.h",
+                "remotefile": "test/c++/9/backward/binders.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/backward/hash_fun.h",
+                "remotefile": "test/c++/9/backward/hash_fun.h"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user9",
+            "password": "password9"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/backward/hash_map",
+                "remotefile": "test/c++/9/backward/hash_map"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/backward/hash_set",
+                "remotefile": "test/c++/9/backward/hash_set"
+            }
+        ]
+    },
+    {
+        "auth_host": {
+            "host": "localhost",
+            "port": 1025,
+            "user": "user10",
+            "password": "password10"
+        },
+        "files": [
+            {
+                "localfile": "./test/upload/files/c++/9/backward/hashtable.h",
+                "remotefile": "test/c++/9/backward/hashtable.h"
+            },
+            {
+                "localfile": "./test/upload/files/c++/9/backward/strstream",
+                "remotefile": "test/c++/9/backward/strstream"
+            }
+        ]
+    }
+]
