@@ -1,5 +1,6 @@
 *.class
-src/test/
+src/test/*
+!src/test/.gitkeep
 node_modules/
 *.csv
 resources/
