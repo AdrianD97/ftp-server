@@ -27,6 +27,8 @@ public class ConnectionHandler {
      */
     private boolean debugMode = true;
 
+    private boolean closed = false;
+
     /**
      * Indicating the last set transfer type
      */
@@ -198,6 +200,10 @@ public class ConnectionHandler {
         }
 
         return true;
+    }
+
+    public boolean isClosed() {
+        return this.closed;
     }
 
     /**
@@ -459,20 +465,7 @@ public class ConnectionHandler {
      */
     private void handleQuit() {
         sendMsgToClient("221 Closing connection");
-        try {
-            if (controlIn != null) {
-                controlIn.close();
-            }
-
-            if (controlOutWriter != null) {
-                controlOutWriter.close();
-            }
-
-            debugOutput("Connection closed");
-        } catch (IOException e) {
-            e.printStackTrace();
-            debugOutput("Could not close the connection");
-        }
+        this.closed = true;
     }
 
     private void handleSyst() {

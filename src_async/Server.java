@@ -7,6 +7,8 @@ import java.nio.channels.SelectionKey;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -117,10 +119,11 @@ public class Server {
 
     private void run() {
         int noOfConnections = 0;
-        Map<String, String> clientproperties = new HashMap<String, String>();
-        clientproperties.put(channelType, clientChannel);
+        Map<String, String> clientProperties = new HashMap<String, String>();
+        clientProperties.put(channelType, clientChannel);
 
-        Map<SocketChannel, ConnectionHandler> connections = new HashMap<SocketChannel, ConnectionHandler>();
+        Map<SocketChannel, ConnectionHandler> connections = new HashMap<SocketChannel, Pair<ConnectionHandler, List<CompletableFuture>>>();
+
         // ExecutorService executor = Executors.newFixedThreadPool(100);
         ExecutorService executor = Executors.newCachedThreadPool();
 
@@ -145,11 +148,14 @@ public class Server {
                             SelectionKey clientKey = clientSocketChannel.register(
                                     selector, SelectionKey.OP_READ, SelectionKey.OP_WRITE);
 
-                            clientKey.attach(clientproperties);
+                            clientKey.attach(clientProperties);
                             int dataPort = this.controlPort + noOfConnections + 1;
                             ConnectionHandler handler = new ConnectionHandler(clientSocketChannel, this.database,
                                     this.fileSystemHandler, dataPort, noOfConnections);
-                            connections.put(clientSocketChannel, handler);
+                            CompletableFuture[] arr = new CompletableFuture[0];
+                            connections.put(clientSocketChannel,
+                                    new Pair<ConnectionHandler, CompletableFuture[]>(handler,
+                                            new LinkedList()));
                             System.out.println("New connection received. Connection handler created successfully.");
                             noOfConnections++;
                         }
@@ -169,25 +175,48 @@ public class Server {
                                  * if quit command, then call the QUIT handler from main thread
                                  * you could end-up with connection to be closed before handling QUIT command
                                  */
+                                /**
+                                 * what about keeping a list of transfer cmd handler's
+                                 * and check if all async ops are done => remove channel from hashtable
+                                 */
 
-                                if (cmd == "QUIT") {
-                                    connections.get(clientChannel).executeCommand(cmd);
-                                } else {
-                                    CompletableFuture.supplyAsync(() -> {
-                                        return connections.get(clientChannel).executeCommand(cmd);
-                                    }, executor);
-                                }
-                            } else if (bytesRead < 0) {
-                                clientChannel.close();
-                                connections.remove(clientChannel);
-                                System.out
-                                        .println("noOfConnections = " + noOfConnections + " -> " + "connections.size = "
-                                                + connections.size());
+                                CompletableFuture future = CompletableFuture.supplyAsync(() -> {
+                                    return connections.get(clientChannel).getKey().executeCommand(cmd);
+                                }, executor);
+
+                                List<CompletableFuture> currentFutures = connections.get(clientChannel).getValue();
+                                currentFutures.add(future);
                             }
                         }
                     }
 
                     iterator.remove();
+                }
+
+                /*
+                 * TODO: iterate over each connection and check if you can close the channel and
+                 * remove it from hashtable (the else block)
+                 * 
+                 * if closed and all async ops are done close the connection and remove it from
+                 * the connections hashtable
+                 * 
+                 */
+                for (Map.Entry<ConnectionHandler, List<CompletableFuture>> entry : connections) {
+                    if (entry.getValue().getKey().isClosed()) {
+                        boolean allDone = true;
+                        /* check if all futures are done */
+                        for (CompletableFuture future : entry.getValue().getValue()) {
+                            if (!future.isDone()) {
+                                allDone = false;
+                                break;
+                            }
+                        }
+
+                        if (allDone) {
+                            clientChannel.close();
+                            connections.remove(clientChannel);
+                        }
+                    }
                 }
             } catch (IOException e) {
                 System.out.println("Exception encountered on selection");

@@ -5,32 +5,92 @@ public class TransferCommandHandler {
     private Socket dataConnection;
     private PrintWriter dataOutWriter;
 
-    public TransferCommandHandler(String rawArgs) {
+    private String ip;
+    private int port;
+    private Debug debug;
+
+    /**
+     * keep reference to the file system handler instance
+     */
+    private FileSystemHandler fileSystemHandler;
+
+    public TransferCommandHandler(String rawArgs, FileSystemHandler fileSystemHandler) {
         /**
          * TODO:
          * - parse raw args => get ip and port (what about not storing ip and address)
          * - open data connection
          */
         String[] stringSplit = args.split(",");
-        String hostName = stringSplit[0] + "." + stringSplit[1] + "." + stringSplit[2] + "." + stringSplit[3];
+        this.ip = stringSplit[0] + "." + stringSplit[1] + "." + stringSplit[2] + "." + stringSplit[3];
 
-        int p = Integer.parseInt(stringSplit[4]) * 256 + Integer.parseInt(stringSplit[5]);
-
-        this._initConnection(hostName, p);
+        this.port = Integer.parseInt(stringSplit[4]) * 256 + Integer.parseInt(stringSplit[5]);
+        this.debug = new Debug(true);
     }
 
-    private void _initConnection(String ipAddress, int port) {
+    private void _initConnection() {
         try {
-            dataConnection = new Socket(ipAddress, port);
+            dataConnection = new Socket(this.ip, this.port);
             dataOutWriter = new PrintWriter(dataConnection.getOutputStream(), true);
-            Utility.debugOutput("Data connection - Active Mode - established");
+            debug.out("Data connection - Active Mode - established");
         } catch (IOException e) {
-            Utility.debugOutput("Could not connect to client data socket");
+            debug.out("Could not connect to client data socket");
             e.printStackTrace();
         }
     }
 
-    public void 
+    /**
+     * Main command dispatcher method. Separates the command from the arguments and
+     * dispatches it to single handler functions.
+     * 
+     * @param cmd the raw input from the socket consisting of command and arguments
+     */
+    public void executeCommand(String cmd) {
+        /* split command and arguments */
+        int index = cmd.indexOf(' ');
+        String command = ((index == -1) ? cmd.toUpperCase() : (cmd.substring(0, index)).toUpperCase());
+        String args = ((index == -1) ? null : cmd.substring(index + 1));
+
+        debug.out("Command: " + command + " Args: " + args);
+
+        /* init connection */
+        this._initConnection();
+
+        /* dispatcher mechanism for different commands */
+        switch (command) {
+            case "LIST":
+                handleNlst(args);
+                break;
+        }
+
+        /* close connection */
+    }
+
+    /**
+     * Handler for NLST (Named List) command. Lists the directory content in a short
+     * format (names only)
+     * 
+     * @param path The directory to be listed
+     */
+    private void handleNlst(String path) {
+        if (dataConnection == null || dataConnection.isClosed()) {
+            sendMsgToClient("425 No data connection was established");
+        } else {
+            String[] dirContent = this.fileSystemHandler.ls(path);
+
+            if (dirContent == null) {
+                sendMsgToClient("550 File does not exist.");
+            } else {
+                sendMsgToClient("125 Opening ASCII mode data connection for file list.");
+
+                for (int i = 0; i < dirContent.length; ++i) {
+                    sendDataMsgToClient(dirContent[i]);
+                }
+
+                sendMsgToClient("226 Transfer complete.");
+            }
+
+        }
+    }
     /**
      * TODO:
      * what should this class be responsible for?
@@ -64,6 +124,6 @@ public class TransferCommandHandler {
      * handle raw commands
      */
     /**
-     * TODO: very important: need to get db and file ystem instance
+     * TODO: very important: need to get file system instance
      */
 }
