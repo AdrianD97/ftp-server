@@ -117,13 +117,18 @@ public class Server {
         System.out.println("FTP Server started listening on port " + controlPort);
     }
 
+    private boolean isTransferCmd(String rawCmd) {
+        return rawCmd.startsWith("LIST") || rawCmd.startsWith("STOR") ||
+                rawCmd.startsWith("APPE") || rawCmd.startsWith("RETR");
+    }
+
     private void run() {
         int noOfConnections = 0;
         Map<String, String> clientProperties = new HashMap<String, String>();
         clientProperties.put(channelType, clientChannel);
 
-        Map<SocketChannel, ConnectionHandler> connections = new HashMap<SocketChannel, Pair<ConnectionHandler, List<CompletableFuture>>>();
-
+        Map<SocketChannel, Pair<ConnectionHandler, List<CompletableFuture>>> connections = new HashMap<SocketChannel, Pair<ConnectionHandler, List<CompletableFuture>>>();
+        Map<SocketChannel, TransferCommandHandler> transferCommandsMap = new HashMap<SocketChannel, TransferCommandHandler>();
         // ExecutorService executor = Executors.newFixedThreadPool(100);
         ExecutorService executor = Executors.newCachedThreadPool();
 
@@ -170,22 +175,22 @@ public class Server {
                                 String cmd = Charset.defaultCharset().decode(buffer).toString().trim();
                                 buffer.clear();
 
-                                /**
-                                 * TODO:
-                                 * if quit command, then call the QUIT handler from main thread
-                                 * you could end-up with connection to be closed before handling QUIT command
-                                 */
-                                /**
-                                 * what about keeping a list of transfer cmd handler's
-                                 * and check if all async ops are done => remove channel from hashtable
-                                 */
+                                if (cmd.startsWith("PORT")) {
+                                    transferCommandsMap.put(clientChannel,
+                                            new TransferCommandHandler(clientChannel, cmd, this.fileSystemHandler));
+                                } else if (this.isTransferCmd(cmd)) {
+                                    TransferCommandHandler transferCommandHandler = transferCommandsMap
+                                            .get(clientChannel);
+                                    CompletableFuture future = CompletableFuture.supplyAsync(() -> {
+                                        return transferCommandHandler.executeCommand(cmd);
+                                    }, executor);
 
-                                CompletableFuture future = CompletableFuture.supplyAsync(() -> {
-                                    return connections.get(clientChannel).getKey().executeCommand(cmd);
-                                }, executor);
-
-                                List<CompletableFuture> currentFutures = connections.get(clientChannel).getValue();
-                                currentFutures.add(future);
+                                    List<CompletableFuture> currentFutures = connections.get(clientChannel).getValue();
+                                    currentFutures.add(future);
+                                    transferCommandsMap.remove(clientChannel);
+                                } else {
+                                    connections.get(clientChannel).getKey().executeCommand(cmd);
+                                }
                             }
                         }
                     }
@@ -194,12 +199,9 @@ public class Server {
                 }
 
                 /*
-                 * TODO: iterate over each connection and check if you can close the channel and
-                 * remove it from hashtable (the else block)
-                 * 
-                 * if closed and all async ops are done close the connection and remove it from
-                 * the connections hashtable
-                 * 
+                 * iterate over each connection and check if can close the channel and
+                 * remove it from hashtable; a collection can be closed if QUIT command was
+                 * received and all async ops are done
                  */
                 for (Map.Entry<ConnectionHandler, List<CompletableFuture>> entry : connections) {
                     if (entry.getValue().getKey().isClosed()) {
@@ -208,7 +210,9 @@ public class Server {
                         for (CompletableFuture future : entry.getValue().getValue()) {
                             if (!future.isDone()) {
                                 allDone = false;
-                                break;
+                                // break;
+                            } else {
+                                // TODO: should send the result to the client :)))))
                             }
                         }
 

@@ -1,9 +1,13 @@
 import java.net.Socket;
 import java.io.PrintWriter;
+import java.nio.channels.SocketChannel;
+import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
 
 public class TransferCommandHandler {
     private Socket dataConnection;
     private PrintWriter dataOutWriter;
+    private SocketChannel clientChannel;
 
     private String ip;
     private int port;
@@ -14,7 +18,7 @@ public class TransferCommandHandler {
      */
     private FileSystemHandler fileSystemHandler;
 
-    public TransferCommandHandler(String rawArgs, FileSystemHandler fileSystemHandler) {
+    public TransferCommandHandler(SocketChannel clientChannel, String rawArgs, FileSystemHandler fileSystemHandler) {
         /**
          * TODO:
          * - parse raw args => get ip and port (what about not storing ip and address)
@@ -25,12 +29,14 @@ public class TransferCommandHandler {
 
         this.port = Integer.parseInt(stringSplit[4]) * 256 + Integer.parseInt(stringSplit[5]);
         this.debug = new Debug(true);
+        this.clientChannel = clientChannel;
+        this.fileSystemHandler = fileSystemHandler;
     }
 
     private void _initConnection() {
         try {
-            dataConnection = new Socket(this.ip, this.port);
-            dataOutWriter = new PrintWriter(dataConnection.getOutputStream(), true);
+            this.dataConnection = new Socket(this.ip, this.port);
+            dataOutWriter = new PrintWriter(this.dataConnection.getOutputStream(), true);
             debug.out("Data connection - Active Mode - established");
         } catch (IOException e) {
             debug.out("Could not connect to client data socket");
@@ -65,6 +71,20 @@ public class TransferCommandHandler {
         /* close connection */
     }
 
+    private void sendMsgToClient(String msg) {
+        try {
+            CharBuffer buffer = CharBuffer.wrap(msg + "\n");
+            while (buffer.hasRemaining()) {
+                this.clientChannel.write(Charset.defaultCharset()
+                        .encode(buffer));
+            }
+            buffer.clear();
+        } catch (IOException e) {
+            System.out.println("Exception encountered on sending message to client");
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Handler for NLST (Named List) command. Lists the directory content in a short
      * format (names only)
@@ -72,21 +92,26 @@ public class TransferCommandHandler {
      * @param path The directory to be listed
      */
     private void handleNlst(String path) {
-        if (dataConnection == null || dataConnection.isClosed()) {
-            sendMsgToClient("425 No data connection was established");
+        if (this.dataConnection == null || this.dataConnection.isClosed()) {
+            this.sendMsgToClient("425 No data connection was established");
+            /**
+             * The error message, but also the success message must be sent to the client by
+             * the main thread
+             * in order to avoid overriding
+             */
         } else {
             String[] dirContent = this.fileSystemHandler.ls(path);
 
             if (dirContent == null) {
-                sendMsgToClient("550 File does not exist.");
+                this.sendMsgToClient("550 File does not exist.");
             } else {
-                sendMsgToClient("125 Opening ASCII mode data connection for file list.");
+                this.sendMsgToClient("125 Opening ASCII mode data connection for file list.");
 
                 for (int i = 0; i < dirContent.length; ++i) {
                     sendDataMsgToClient(dirContent[i]);
                 }
 
-                sendMsgToClient("226 Transfer complete.");
+                this.sendMsgToClient("226 Transfer complete.");
             }
 
         }
