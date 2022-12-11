@@ -15,10 +15,6 @@ import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 
 /**
- * OBS: All path are absolute paths relative to the root of file system
- */
-
-/**
  * Class responsible for handling connections
  */
 public class ConnectionHandler {
@@ -75,21 +71,18 @@ public class ConnectionHandler {
     private userStatus currentUserStatus = userStatus.NOTLOGGEDIN;
     private User user = null;
 
-    private int id;
-
     /**
      * Create new worker with given client socket
      * 
      * @param dataPort the port for the data connection
      */
     public ConnectionHandler(SocketChannel clientChannel, Database database, FileSystemHandler fileSystemHandler,
-            int dataPort, int id) {
+            int dataPort) {
         this.controlSocket = clientChannel;
         this.database = database;
         this.fileSystemHandler = fileSystemHandler;
         this.dataPort = dataPort;
         this.currDirectory = System.getProperty("user.dir") + "/test";
-        this.id = id;
 
         sendMsgToClient("220");
     }
@@ -116,14 +109,6 @@ public class ConnectionHandler {
 
             case "PASS":
                 handlePass(args);
-                break;
-
-            case "LIST":
-                handleNlst(args);
-                break;
-
-            case "NLST":
-                handleNlst(args);
                 break;
 
             case "PWD":
@@ -157,10 +142,6 @@ public class ConnectionHandler {
 
             case "EPRT":
                 handleEPort(args);
-                break;
-
-            case "RETR":
-                handleRetr(args);
                 break;
 
             case "MKD":
@@ -224,21 +205,6 @@ public class ConnectionHandler {
             System.out.println("Exception encountered on sending message to client");
             e.printStackTrace();
         }
-    }
-
-    /**
-     * Send a message to the connected client over the data connection.
-     * 
-     * @param msg Message to be sent
-     */
-    private void sendDataMsgToClient(String msg) {
-        if (dataConnection == null || dataConnection.isClosed()) {
-            sendMsgToClient("425 No data connection was established");
-            debugOutput("Cannot send message, because no data connection is established");
-        } else {
-            dataOutWriter.print(msg + '\r' + '\n');
-        }
-
     }
 
     /**
@@ -340,35 +306,6 @@ public class ConnectionHandler {
         } else { /* Wrong password */
             sendMsgToClient("530 Not logged in");
         }
-    }
-
-    /**
-     * Handler for NLST (Named List) command. Lists the directory content in a short
-     * format (names only)
-     * 
-     * @param path The directory to be listed
-     */
-    private void handleNlst(String path) {
-        if (dataConnection == null || dataConnection.isClosed()) {
-            sendMsgToClient("425 No data connection was established");
-        } else {
-            String[] dirContent = this.fileSystemHandler.ls(path);
-
-            if (dirContent == null) {
-                sendMsgToClient("550 File does not exist.");
-            } else {
-                sendMsgToClient("125 Opening ASCII mode data connection for file list.");
-
-                for (int i = 0; i < dirContent.length; ++i) {
-                    sendDataMsgToClient(dirContent[i]);
-                }
-
-                sendMsgToClient("226 Transfer complete.");
-                closeDataConnection();
-            }
-
-        }
-
     }
 
     /**
@@ -554,64 +491,6 @@ public class ConnectionHandler {
     }
 
     /**
-     * Handler for the RETR (retrieve) command. Retrieve transfers a file from the
-     * ftp server to the client.
-     * 
-     * @param path The path to the file to transfer to the user (path also contains
-     *             the name of the file)
-     */
-    private void handleRetr(String path) {
-        if (path == null) {
-            sendMsgToClient("501 No path given");
-            return;
-        }
-
-        int lastIndex = path.lastIndexOf('/');
-        String name = path.substring(lastIndex + 1);
-        OutputStream stream = null;
-
-        try {
-            stream = dataConnection.getOutputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-            sendMsgToClient("535 Failed to download file " + name);
-            return;
-        }
-
-        /* Binary mode */
-        if (transferMode == transferType.BINARY) {
-            sendMsgToClient("150 Opening binary mode data connection for requested file " + name);
-
-            debugOutput("Starting file transmission of " + name);
-
-            if (this.fileSystemHandler.download(path, FileType.BINARY,
-                    new BufferedOutputStream(stream)) == false) {
-                sendMsgToClient("535 Failed to download file " + name);
-            } else {
-                debugOutput("Completed file transmission of " + name);
-
-                sendMsgToClient("226 File transfer successful. Closing data connection.");
-            }
-        } else {
-            /* ASCII mode */
-            sendMsgToClient("150 Opening ASCII mode data connection for requested file " + name);
-
-            debugOutput("Starting file transmission of " + name);
-
-            if (this.fileSystemHandler.download(path, FileType.ASCII,
-                    new PrintWriter(stream, true)) == false) {
-                sendMsgToClient("535 Failed to download file " + name);
-            } else {
-                debugOutput("Completed file transmission of " + name);
-
-                sendMsgToClient("226 File transfer successful. Closing data connection.");
-            }
-        }
-
-        closeDataConnection();
-    }
-
-    /**
      * Handler for STOR (Store) command. Store receives a file from the client and
      * saves it to the ftp server.
      * 
@@ -686,10 +565,12 @@ public class ConnectionHandler {
 
         /* Binary mode */
         if (transferMode == transferType.BINARY) {
+            // add the folowing operation inside a Completabel future :))))
             result = this.fileSystemHandler.upload(path.substring(0, lastIndex), name, FileType.BINARY,
                     new BufferedInputStream(stream), append);
         } else {
             /* ASCII mode */
+            // add the folowing operation inside a Completabel future :))))
             result = this.fileSystemHandler.upload(path.substring(0, lastIndex), name, FileType.ASCII,
                     new BufferedReader(new InputStreamReader(stream)), append);
         }
@@ -713,8 +594,7 @@ public class ConnectionHandler {
      */
     private void debugOutput(String msg) {
         if (debugMode) {
-            System.out.println(Thread.currentThread().getId() + ": " + this.id + " - " + this.controlSocket.hashCode()
-                    + " - " + msg);
+            System.out.println(msg);
         }
     }
 }

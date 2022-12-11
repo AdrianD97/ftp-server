@@ -3,11 +3,23 @@ import java.io.PrintWriter;
 import java.nio.channels.SocketChannel;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.io.IOException;
+import java.nio.CharBuffer;
+import java.nio.charset.Charset;
+import java.io.OutputStream;
+import java.io.BufferedOutputStream;
 
 public class TransferCommandHandler {
+    private enum transferType {
+        ASCII, BINARY
+    }
+
     private Socket dataConnection;
     private PrintWriter dataOutWriter;
     private SocketChannel clientChannel;
+    private static transferType transferMode = transferType.ASCII;
 
     private String ip;
     private int port;
@@ -19,27 +31,25 @@ public class TransferCommandHandler {
     private FileSystemHandler fileSystemHandler;
 
     public TransferCommandHandler(SocketChannel clientChannel, String rawArgs, FileSystemHandler fileSystemHandler) {
-        /**
-         * TODO:
-         * - parse raw args => get ip and port (what about not storing ip and address)
-         * - open data connection
-         */
-        String[] stringSplit = args.split(",");
+        String[] stringSplit = rawArgs.split(",");
         this.ip = stringSplit[0] + "." + stringSplit[1] + "." + stringSplit[2] + "." + stringSplit[3];
 
         this.port = Integer.parseInt(stringSplit[4]) * 256 + Integer.parseInt(stringSplit[5]);
         this.debug = new Debug(true);
         this.clientChannel = clientChannel;
         this.fileSystemHandler = fileSystemHandler;
+
+        this._initConnection();
+        this._sendMsgToClient("200 Command OK");
     }
 
     private void _initConnection() {
         try {
             this.dataConnection = new Socket(this.ip, this.port);
-            dataOutWriter = new PrintWriter(this.dataConnection.getOutputStream(), true);
-            debug.out("Data connection - Active Mode - established");
+            this.dataOutWriter = new PrintWriter(this.dataConnection.getOutputStream(), true);
+            this.debug.out("Data connection - Active Mode - established");
         } catch (IOException e) {
-            debug.out("Could not connect to client data socket");
+            this.debug.out("Could not connect to client data socket");
             e.printStackTrace();
         }
     }
@@ -50,28 +60,52 @@ public class TransferCommandHandler {
      * 
      * @param cmd the raw input from the socket consisting of command and arguments
      */
-    public void executeCommand(String cmd) {
+    public CompletableFuture executeCommand(String cmd, ExecutorService executor) {
         /* split command and arguments */
         int index = cmd.indexOf(' ');
         String command = ((index == -1) ? cmd.toUpperCase() : (cmd.substring(0, index)).toUpperCase());
         String args = ((index == -1) ? null : cmd.substring(index + 1));
+        CompletableFuture future = null;
 
-        debug.out("Command: " + command + " Args: " + args);
-
-        /* init connection */
-        this._initConnection();
+        this.debug.out("Command: " + command + " Args: " + args);
 
         /* dispatcher mechanism for different commands */
         switch (command) {
             case "LIST":
-                handleNlst(args);
+                future = _handleNlst(args, executor);
+                break;
+
+            case "RETR":
+                future = _handleRetr(args, executor);
                 break;
         }
 
-        /* close connection */
+        return future;
     }
 
-    private void sendMsgToClient(String msg) {
+    public void closeTransfer(String result) {
+        if (result != null) {
+            this._sendMsgToClient(result);
+        }
+
+        this._closeDataConnection();
+    }
+
+    /**
+     * Close established data connection sockets and streams
+     */
+    private void _closeDataConnection() {
+        try {
+            this.dataOutWriter.close();
+            this.dataConnection.close();
+            this.debug.out("Data connection was closed");
+        } catch (IOException e) {
+            this.debug.out("Could not close data connection");
+            e.printStackTrace();
+        }
+    }
+
+    private void _sendMsgToClient(String msg) {
         try {
             CharBuffer buffer = CharBuffer.wrap(msg + "\n");
             while (buffer.hasRemaining()) {
@@ -89,66 +123,99 @@ public class TransferCommandHandler {
      * Handler for NLST (Named List) command. Lists the directory content in a short
      * format (names only)
      * 
-     * @param path The directory to be listed
+     * @param path     The directory to be listed
+     * @param executor Executor service used for running async operations
      */
-    private void handleNlst(String path) {
+    private CompletableFuture _handleNlst(String path, ExecutorService executor) {
         if (this.dataConnection == null || this.dataConnection.isClosed()) {
-            this.sendMsgToClient("425 No data connection was established");
-            /**
-             * The error message, but also the success message must be sent to the client by
-             * the main thread
-             * in order to avoid overriding
-             */
+            this._sendMsgToClient("425 No data connection was established");
+            this.debug.out("Cannot send message, because no data connection is established");
         } else {
             String[] dirContent = this.fileSystemHandler.ls(path);
 
             if (dirContent == null) {
-                this.sendMsgToClient("550 File does not exist.");
+                this._sendMsgToClient("550 File does not exist.");
             } else {
-                this.sendMsgToClient("125 Opening ASCII mode data connection for file list.");
+                this._sendMsgToClient("125 Opening ASCII mode data connection for file list.");
 
-                for (int i = 0; i < dirContent.length; ++i) {
-                    sendDataMsgToClient(dirContent[i]);
-                }
+                return CompletableFuture.supplyAsync(() -> {
+                    for (int i = 0; i < dirContent.length; ++i) {
+                        this.dataOutWriter.print(dirContent[i] + '\r' + '\n');
+                    }
 
-                this.sendMsgToClient("226 Transfer complete.");
+                    return "226 Transfer complete.";
+                }, executor);
             }
-
         }
+
+        return null;
     }
-    /**
-     * TODO:
-     * what should this class be responsible for?
-     * - handle PORT command and get ip address and port
-     * - open a connection; establishing this connacetion will allow us to
-     * communicate with client
-     * - handle each of the following commands properly: append, upload, downoad,
-     * listing
-     * 
-     * OBS:
-     * - when the main thread gets a PORT command, it should create a
-     * TransferCommandHandler and add keep it into a hashtable
-     * - using this approach we avoid the overriding of data connection
-     * 
-     * VERY IMPORTANT NOTE:
-     * - remove the entry from the hastable as soon as you get the
-     * transfer command => in this way you avoid synchronization issues
-     */
 
     /**
-     * - should have an execute command method
-     * for each transfer command will create async job (each job will open
-     * a data connection do the task, and in the end will close the connection)
-     * - it will avoid the overriding
+     * Handler for the RETR (retrieve) command. Retrieve transfers a file from the
+     * ftp server to the client.
+     * 
+     * @param path     The path to the file to transfer to the user (path also
+     *                 contains
+     *                 the name of the file)
+     * @param executor Executor service used for running async
+     *                 operations
      */
+    private CompletableFuture _handleRetr(String path, ExecutorService executor) {
+        if (path == null) {
+            this._sendMsgToClient("501 No path given");
+            return null;
+        }
 
-    /**
-     * take in account the following:
-     * - each object must handle a single transfer command
-     * - it simplifies things a lot => expose a execute command method that
-     * handle raw commands
-     */
-    /**
-     * TODO: very important: need to get file system instance
-     */
+        int lastIndex = path.lastIndexOf('/');
+        String name = path.substring(lastIndex + 1);
+        OutputStream tmpStream = null;
+
+        try {
+            tmpStream = this.dataConnection.getOutputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+            this._sendMsgToClient("535 Failed to download file " + name);
+            return null;
+        }
+
+        final OutputStream stream = tmpStream;
+        CompletableFuture future = null;
+
+        /* Binary mode */
+        if (transferMode == transferType.BINARY) {
+            this._sendMsgToClient("150 Opening binary mode data connection for requested file " + name);
+
+            this.debug.out("Starting file transmission of " + name);
+
+            future = CompletableFuture.supplyAsync(() -> {
+                if (this.fileSystemHandler.download(path, FileType.BINARY,
+                        new BufferedOutputStream(stream)) == false) {
+                    return "535 Failed to download file " + name;
+                } else {
+                    this.debug.out("Completed file transmission of " + name);
+
+                    return "226 File transfer successful. Closing data connection.";
+                }
+            }, executor);
+        } else {
+            /* ASCII mode */
+            this._sendMsgToClient("150 Opening ASCII mode data connection for requested file " + name);
+
+            this.debug.out("Starting file transmission of " + name);
+
+            future = CompletableFuture.supplyAsync(() -> {
+                if (this.fileSystemHandler.download(path, FileType.ASCII,
+                        new PrintWriter(stream, true)) == false) {
+                    return "535 Failed to download file " + name;
+                } else {
+                    this.debug.out("Completed file transmission of " + name);
+
+                    return "226 File transfer successful. Closing data connection.";
+                }
+            }, executor);
+        }
+
+        return future;
+    }
 }

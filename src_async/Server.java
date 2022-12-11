@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.io.IOException;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
@@ -10,12 +11,13 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
+import java.util.concurrent.CompletableFuture;
 
+// TODO: remove this class because no need it anymore
 final class Pair<K, V> {
     private K key;
     private V value;
@@ -33,30 +35,6 @@ final class Pair<K, V> {
         return value;
     }
 };
-
-/**
- * TODO:
- * you need to keep all connections on the main thread
- * what must you store for each connection?
- * - the main socket
- * - user data (as username and credentials -> need them for authentication)
- * - for each list, put, get and append command you get a PORT command
- * - the ideea is to keep each commandhandler (let's call it task and it must be
- * responsible for handling
- * these tasks: list, upload, downlod)
- * - create a task each time when a PORT command is received and store it in the
- * hashmap (how do you clean)
- * let's crete a TransferCommandHandler
- * it will handle put, get, list, upload commands -> for each command you need a
- * new data connection to be open
- * 
- * when get exit command, just remove the entry from hashmap, because the
- * command will be closed
- * after the trasnmission is done :))
- * 
- * the user connection class will be resposnible for user authenticathion
- * and for each PORT received command will also receive the transfer command
- */
 
 /**
  * FTP Server class - async version
@@ -86,7 +64,7 @@ public class Server {
 
     public Server(String root) {
         /* init file system */
-        this.fileSystemHandler = new FileSystemHandler(System.getProperty("user.dir"));// + "/" + root);
+        this.fileSystemHandler = new FileSystemHandler(System.getProperty("user.dir"));
 
         /* load database */
         try {
@@ -127,98 +105,126 @@ public class Server {
         Map<String, String> clientProperties = new HashMap<String, String>();
         clientProperties.put(channelType, clientChannel);
 
-        Map<SocketChannel, Pair<ConnectionHandler, List<CompletableFuture>>> connections = new HashMap<SocketChannel, Pair<ConnectionHandler, List<CompletableFuture>>>();
-        Map<SocketChannel, TransferCommandHandler> transferCommandsMap = new HashMap<SocketChannel, TransferCommandHandler>();
+        Map<SocketChannel, ConnectionHandler> connections = new HashMap<SocketChannel, ConnectionHandler>();
+        Map<SocketChannel, Map<TransferCommandHandler, CompletableFuture<String>>> transferCommandsMap = new HashMap<SocketChannel, Map<TransferCommandHandler, CompletableFuture<String>>>();
+        Map<SocketChannel, TransferCommandHandler> tmpTransferCommandsMap = new HashMap<SocketChannel, TransferCommandHandler>();
+
         // ExecutorService executor = Executors.newFixedThreadPool(100);
         ExecutorService executor = Executors.newCachedThreadPool();
+        String blockType = "select";
 
         while (true) {
             try {
-                if (this.selector.select() == 0) {
-                    continue;
+                int selectResult = 0;
+
+                if (connections.size() == 0) {
+                    blockType = "select";
+                } else {
+                    blockType = "selectNow";
                 }
 
-                Set<SelectionKey> selectedKeys = this.selector.selectedKeys();
-                Iterator<SelectionKey> iterator = selectedKeys.iterator();
+                if (blockType.equals("select")) {
+                    selectResult = this.selector.select();
+                } else {
+                    selectResult = this.selector.selectNow();
+                }
 
-                while (iterator.hasNext()) {
-                    SelectionKey key = iterator.next();
+                if (selectResult != 0) {
+                    Set<SelectionKey> selectedKeys = this.selector.selectedKeys();
+                    Iterator<SelectionKey> iterator = selectedKeys.iterator();
 
-                    if (((Map) key.attachment()).get(channelType).equals(serverChannel)) {
-                        ServerSocketChannel serverSocketChannel = (ServerSocketChannel) key.channel();
-                        SocketChannel clientSocketChannel = serverSocketChannel.accept();
+                    while (iterator.hasNext()) {
+                        SelectionKey key = iterator.next();
 
-                        if (clientSocketChannel != null) {
-                            clientSocketChannel.configureBlocking(false);
-                            SelectionKey clientKey = clientSocketChannel.register(
-                                    selector, SelectionKey.OP_READ, SelectionKey.OP_WRITE);
+                        if (((Map) key.attachment()).get(channelType).equals(serverChannel)) {
+                            ServerSocketChannel serverSocketChannel = (ServerSocketChannel) key.channel();
+                            SocketChannel clientSocketChannel = serverSocketChannel.accept();
 
-                            clientKey.attach(clientProperties);
-                            int dataPort = this.controlPort + noOfConnections + 1;
-                            ConnectionHandler handler = new ConnectionHandler(clientSocketChannel, this.database,
-                                    this.fileSystemHandler, dataPort, noOfConnections);
-                            CompletableFuture[] arr = new CompletableFuture[0];
-                            connections.put(clientSocketChannel,
-                                    new Pair<ConnectionHandler, CompletableFuture[]>(handler,
-                                            new LinkedList()));
-                            System.out.println("New connection received. Connection handler created successfully.");
-                            noOfConnections++;
-                        }
-                    } else {
-                        ByteBuffer buffer = ByteBuffer.allocate(100);
-                        SocketChannel clientChannel = (SocketChannel) key.channel();
-                        int bytesRead = 0;
+                            if (clientSocketChannel != null) {
+                                clientSocketChannel.configureBlocking(false);
+                                SelectionKey clientKey = clientSocketChannel.register(
+                                        selector, SelectionKey.OP_READ, SelectionKey.OP_WRITE);
 
-                        if (key.isReadable()) {
-                            if ((bytesRead = clientChannel.read(buffer)) > 0) {
-                                buffer.flip();
-                                String cmd = Charset.defaultCharset().decode(buffer).toString().trim();
-                                buffer.clear();
+                                clientKey.attach(clientProperties);
+                                int dataPort = this.controlPort + noOfConnections + 1;
+                                ConnectionHandler handler = new ConnectionHandler(clientSocketChannel, this.database,
+                                        this.fileSystemHandler, dataPort);
+                                connections.put(clientSocketChannel, handler);
+                                System.out.println("New connection received. Connection handler created successfully.");
+                                noOfConnections++;
+                            }
+                        } else {
+                            ByteBuffer buffer = ByteBuffer.allocate(100);
+                            SocketChannel clientChannel = (SocketChannel) key.channel();
+                            int bytesRead = 0;
 
-                                if (cmd.startsWith("PORT")) {
-                                    transferCommandsMap.put(clientChannel,
-                                            new TransferCommandHandler(clientChannel, cmd, this.fileSystemHandler));
-                                } else if (this.isTransferCmd(cmd)) {
-                                    TransferCommandHandler transferCommandHandler = transferCommandsMap
-                                            .get(clientChannel);
-                                    CompletableFuture future = CompletableFuture.supplyAsync(() -> {
-                                        return transferCommandHandler.executeCommand(cmd);
-                                    }, executor);
+                            if (key.isReadable()) {
+                                if ((bytesRead = clientChannel.read(buffer)) > 0) {
+                                    buffer.flip();
+                                    String cmd = Charset.defaultCharset().decode(buffer).toString().trim();
+                                    buffer.clear();
+                                    System.out.println(cmd);
 
-                                    List<CompletableFuture> currentFutures = connections.get(clientChannel).getValue();
-                                    currentFutures.add(future);
-                                    transferCommandsMap.remove(clientChannel);
-                                } else {
-                                    connections.get(clientChannel).getKey().executeCommand(cmd);
+                                    if (cmd.startsWith("PORT")) {
+                                        tmpTransferCommandsMap.put(clientChannel,
+                                                new TransferCommandHandler(clientChannel, cmd.substring(5),
+                                                        this.fileSystemHandler));
+                                    } else if (this.isTransferCmd(cmd)) {
+                                        TransferCommandHandler transferCommandHandler = tmpTransferCommandsMap
+                                                .get(clientChannel);
+                                        if (!transferCommandsMap.containsKey(clientChannel)) {
+                                            transferCommandsMap.put(clientChannel,
+                                                    new HashMap<TransferCommandHandler, CompletableFuture<String>>());
+                                        }
+
+                                        CompletableFuture<String> future = transferCommandHandler.executeCommand(cmd,
+                                                executor);
+                                        transferCommandsMap.get(clientChannel).put(transferCommandHandler, future);
+                                        tmpTransferCommandsMap.remove(clientChannel);
+                                    } else {
+                                        connections.get(clientChannel).executeCommand(cmd);
+                                    }
                                 }
                             }
                         }
-                    }
 
-                    iterator.remove();
+                        iterator.remove();
+                    }
                 }
 
-                /*
-                 * iterate over each connection and check if can close the channel and
-                 * remove it from hashtable; a collection can be closed if QUIT command was
-                 * received and all async ops are done
-                 */
-                for (Map.Entry<ConnectionHandler, List<CompletableFuture>> entry : connections) {
-                    if (entry.getValue().getKey().isClosed()) {
+                if (connections.size() != 0) {
+                    Iterator<Map.Entry<SocketChannel, ConnectionHandler>> outerIter = connections.entrySet().iterator();
+                    while (outerIter.hasNext()) {
+                        Map.Entry<SocketChannel, ConnectionHandler> entry = outerIter
+                                .next();
                         boolean allDone = true;
                         /* check if all futures are done */
-                        for (CompletableFuture future : entry.getValue().getValue()) {
-                            if (!future.isDone()) {
-                                allDone = false;
-                                // break;
-                            } else {
-                                // TODO: should send the result to the client :)))))
+                        if (transferCommandsMap.containsKey(entry.getKey())) {
+                            Iterator<Map.Entry<TransferCommandHandler, CompletableFuture<String>>> innerIter = transferCommandsMap
+                                    .get(entry.getKey()).entrySet().iterator();
+                            while (innerIter.hasNext()) {
+                                Map.Entry<TransferCommandHandler, CompletableFuture<String>> item = innerIter.next();
+                                if (!item.getValue().isDone()) {
+                                    allDone = false;
+                                } else {
+                                    if (item.getValue() != null) {
+                                        try {
+                                            item.getKey().closeTransfer(item.getValue().get());
+                                        } catch (Exception e) {
+                                        }
+                                    } else {
+                                        item.getKey().closeTransfer(null);
+                                    }
+
+                                    innerIter.remove();
+                                }
                             }
                         }
 
-                        if (allDone) {
-                            clientChannel.close();
-                            connections.remove(clientChannel);
+                        if (allDone && entry.getValue().isClosed()) {
+                            entry.getKey().close();
+                            transferCommandsMap.remove(entry.getKey());
+                            outerIter.remove();
                         }
                     }
                 }

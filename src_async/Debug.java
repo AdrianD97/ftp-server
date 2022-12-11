@@ -5,7 +5,7 @@ public class Debug {
         this.debugMode = debugMode;
     }
 
-    public void out() {
+    public void out(String msg) {
         if (this.debugMode) {
             System.out.println("Thread " + Thread.currentThread().getId() + ": " + msg);
         }
