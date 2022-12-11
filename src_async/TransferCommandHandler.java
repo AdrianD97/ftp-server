@@ -10,6 +10,10 @@ import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.io.OutputStream;
 import java.io.BufferedOutputStream;
+import java.io.InputStream;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class TransferCommandHandler {
     private enum transferType {
@@ -72,11 +76,19 @@ public class TransferCommandHandler {
         /* dispatcher mechanism for different commands */
         switch (command) {
             case "LIST":
-                future = _handleNlst(args, executor);
+                future = this._handleNlst(args, executor);
                 break;
 
             case "RETR":
-                future = _handleRetr(args, executor);
+                future = this._handleRetr(args, executor);
+                break;
+
+            case "STOR":
+                future = this._handleStor(args, executor);
+                break;
+
+            case "APPE":
+                future = this._handleAppe(args, executor);
                 break;
         }
 
@@ -217,5 +229,85 @@ public class TransferCommandHandler {
         }
 
         return future;
+    }
+
+    /**
+     * Handler for STOR (Store) command. Store receives a file from the client and
+     * saves it to the ftp server.
+     * 
+     * @param path     File path (the path also contains the name of the file)
+     * 
+     * @param executor Executor service used for running async
+     *                 operations
+     */
+    private CompletableFuture _handleStor(String path, ExecutorService executor) {
+        return this._handleFile(path, false, executor);
+    }
+
+    /**
+     * Handler for APPE (Append) command. Append receives a file from the client and
+     * append to it the data sent by client on open connection.
+     * 
+     * @param path     File path (the path also contains the name of the file)
+     * @param executor Executor service used for running async
+     *                 operations
+     */
+    private CompletableFuture _handleAppe(String path, ExecutorService executor) {
+        return this._handleFile(path, true, executor);
+    }
+
+    /**
+     * used to write a new file or to append to a file (if the file not found
+     * a new file is created)
+     * 
+     * @param path   File path (the path also contains the name of the file)
+     * @param append true if it has to append to a file; false to create a new file
+     */
+    private CompletableFuture _handleFile(String path, boolean append, ExecutorService executor) {
+        if (path == null) {
+            this._sendMsgToClient("501 No path given");
+            return null;
+        }
+
+        int lastIndex = path.lastIndexOf('/');
+        String name = path.substring(lastIndex + 1);
+        InputStream tmpStream = null;
+
+        try {
+            tmpStream = dataConnection.getInputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+            this._sendMsgToClient("532 Failed to " + (append == true ? "append to file " : "upload file ") + name);
+            return null;
+        }
+
+        final InputStream stream = tmpStream;
+
+        this._sendMsgToClient("150 Opening " + (transferMode == transferType.BINARY ? "binary" : "ASCII")
+                + " mode data connection for requested file " + name);
+
+        this.debug.out("Start " + (append == true ? "appending to file " : "storing file ") + name);
+
+        return CompletableFuture.supplyAsync(() -> {
+            boolean result;
+
+            /* Binary mode */
+            if (transferMode == transferType.BINARY) {
+                result = this.fileSystemHandler.upload(path.substring(0, lastIndex), name, FileType.BINARY,
+                        new BufferedInputStream(stream), append);
+            } else {
+                /* ASCII mode */
+                result = this.fileSystemHandler.upload(path.substring(0, lastIndex), name, FileType.ASCII,
+                        new BufferedReader(new InputStreamReader(stream)), append);
+            }
+
+            if (result == false) {
+                return "532 Failed " + (append == true ? "appending to file " : "storing file ") + name;
+            } else {
+                this.debug.out("Completed " + (append == true ? "appending to file " : "storing file ") + name);
+
+                return "226 File transfer successful. Closing data connection.";
+            }
+        }, executor);
     }
 }

@@ -1,10 +1,6 @@
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -158,16 +154,8 @@ public class ConnectionHandler {
                 handleType(args);
                 break;
 
-            case "STOR":
-                handleStor(args);
-                break;
-
             case "DELE":
                 handleDele(args);
-                break;
-
-            case "APPE":
-                handleAppe(args);
                 break;
 
             case "RNFR":
@@ -491,16 +479,6 @@ public class ConnectionHandler {
     }
 
     /**
-     * Handler for STOR (Store) command. Store receives a file from the client and
-     * saves it to the ftp server.
-     * 
-     * @param path File path (the path also contains the name of the file)
-     */
-    private void handleStor(String path) {
-        this._handleFile(path, false);
-    }
-
-    /**
      * Handler for DELE (delete a file) command.
      * 
      * @param path File path (the path also contains the name of the file)
@@ -519,71 +497,6 @@ public class ConnectionHandler {
         } else {
             sendMsgToClient("250 Successfully deleted file " + name);
         }
-    }
-
-    /**
-     * Handler for APPE (Append) command. Append receives a file from the client and
-     * append to it the data sent by client on open connection.
-     * 
-     * @param path File path (the path also contains the name of the file)
-     */
-    private void handleAppe(String path) {
-        this._handleFile(path, true);
-    }
-
-    /**
-     * used to write a new file or to append to a file (if the file not found
-     * a new file is created)
-     * 
-     * @param path   File path (the path also contains the name of the file)
-     * @param append true if it has to append to a file; false to create a new file
-     */
-    private void _handleFile(String path, boolean append) {
-        if (path == null) {
-            sendMsgToClient("501 No path given");
-            return;
-        }
-
-        int lastIndex = path.lastIndexOf('/');
-        String name = path.substring(lastIndex + 1);
-        InputStream stream = null;
-
-        try {
-            stream = dataConnection.getInputStream();
-        } catch (IOException e) {
-            e.printStackTrace();
-            sendMsgToClient("532 Failed to " + (append == true ? "append to file " : "upload file ") + name);
-            return;
-        }
-
-        sendMsgToClient("150 Opening " + (transferMode == transferType.BINARY ? "binary" : "ASCII")
-                + " mode data connection for requested file " + name);
-
-        debugOutput("Start " + (append == true ? "appending to file " : "storing file ") + name);
-
-        boolean result;
-
-        /* Binary mode */
-        if (transferMode == transferType.BINARY) {
-            // add the folowing operation inside a Completabel future :))))
-            result = this.fileSystemHandler.upload(path.substring(0, lastIndex), name, FileType.BINARY,
-                    new BufferedInputStream(stream), append);
-        } else {
-            /* ASCII mode */
-            // add the folowing operation inside a Completabel future :))))
-            result = this.fileSystemHandler.upload(path.substring(0, lastIndex), name, FileType.ASCII,
-                    new BufferedReader(new InputStreamReader(stream)), append);
-        }
-
-        if (result == false) {
-            sendMsgToClient("532 Failed " + (append == true ? "appending to file " : "storing file ") + name);
-        } else {
-            debugOutput("Completed " + (append == true ? "appending to file " : "storing file ") + name);
-
-            sendMsgToClient("226 File transfer successful. Closing data connection.");
-        }
-
-        closeDataConnection();
     }
 
     /**
