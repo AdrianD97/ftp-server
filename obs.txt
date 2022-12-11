@@ -8,3 +8,7 @@ check if there is an executor that can change dinamically number of available th
 
 You must mention about what executor you used and how it works :))))
 also you could mention why you choose this executor; and describe how exactly it works :))))
+
+Don't forget to mention about: https://docs.oracle.com/javase/7/docs/api/java/nio/channels/Selector.html#select(long)
+
+Probably the list operation is slower because you read from disk :)))) 

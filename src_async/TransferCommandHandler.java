@@ -143,21 +143,21 @@ public class TransferCommandHandler {
             this._sendMsgToClient("425 No data connection was established");
             this.debug.out("Cannot send message, because no data connection is established");
         } else {
-            String[] dirContent = this.fileSystemHandler.ls(path);
+            this._sendMsgToClient("125 Opening ASCII mode data connection for file list.");
 
-            if (dirContent == null) {
-                this._sendMsgToClient("550 File does not exist.");
-            } else {
-                this._sendMsgToClient("125 Opening ASCII mode data connection for file list.");
+            return CompletableFuture.supplyAsync(() -> {
+                String[] dirContent = this.fileSystemHandler.ls(path);
 
-                return CompletableFuture.supplyAsync(() -> {
-                    for (int i = 0; i < dirContent.length; ++i) {
-                        this.dataOutWriter.print(dirContent[i] + '\r' + '\n');
-                    }
+                if (dirContent == null) {
+                    return "550 File does not exist.";
+                }
 
-                    return "226 Transfer complete.";
-                }, executor);
-            }
+                for (int i = 0; i < dirContent.length; ++i) {
+                    this.dataOutWriter.print(dirContent[i] + '\r' + '\n');
+                }
+
+                return "226 Transfer complete.";
+            }, executor);
         }
 
         return null;
