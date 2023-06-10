@@ -2,7 +2,7 @@
 src/test/*
 !src/test/.gitkeep
 node_modules/
-*.csv
+#*.csv
 resources/
 client/test/download/files/*
 .vscode/
